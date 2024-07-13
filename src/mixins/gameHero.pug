@@ -1,0 +1,18 @@
+include ./steamBtn.pug
+include ./itchBtn.pug
+include ./kongBtn.pug
+
+mixin gameHero(title, subtitle, backgroundImageUrl, isSteamBtn, isItchBtn, isKongBtn, btnLink, btnText, isPale)
+    #intro.hero.is-medium.background-hero-image(style=backgroundImageUrl, class={"pale-hero-image": isPale})
+        .hero-body.columns.is-vcentered
+            .column
+                p.title #{title}
+                p.subtitle #{subtitle}
+            .column.is-flex.is-justify-content-center
+                if isSteamBtn
+                    +steamBtn(btnLink, btnText)
+                if isItchBtn
+                    +itchBtn(btnLink, btnText)
+                if isKongBtn
+                    +kongBtn(btnLink, btnText)
+                    

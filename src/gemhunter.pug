@@ -1,0 +1,15 @@
+include ./mixins/gameHero.pug
+include ./mixins/gameDetail.pug
+
+doctype html
+html(lang='en')
+    include includes/head.pug
+include includes/top-nav.pug
++gameHero('Gem Hunter', 'Puzzle strategy game on an infinite hex board.', 'background-image:url(\'./assets/img/gemhunter-gameplay-start.png\')', false, true, false, 'https://avalonstudios.itch.io/gem-hunter', 'Available on')
+section#games.section
+    +gameDetail('Dig', 'Use blue dots to learn where treasure is buried and red x\'s to warn where there are mines.', './assets/img/gemhunter-dig.png')
+    +gameDetail('Upgrade', 'Every night, return to your ship to improve your tools. Choose wisely as you level to make the best use of your gems.', './assets/img/gemhunter-upgrade.png')
+    +gameDetail('Fix', 'Find your lost ship parts. Once your ship is fully repaired, you win.', './assets/img/gemhunter-ship-part-gameplay.png')
+    +gameDetail('Excel', 'Achieve great things with careful resource management. How few days will it take for you to find all of the ship parts? How deep can you dig on the first day of a new playthrough?', './assets/img/gemhunter-achievement.png')
+script
+    include script.js

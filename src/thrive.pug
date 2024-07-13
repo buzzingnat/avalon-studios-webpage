@@ -1,0 +1,15 @@
+include ./mixins/gameHero.pug
+include ./mixins/gameDetail.pug
+
+doctype html
+html(lang='en')
+    include includes/head.pug
+include includes/top-nav.pug
++gameHero('Thrive', 'A hardcore bullet hell game with RPG elements.', 'background-image:url(\'./assets/img/thrive/thrive-maintitle-playbutton.png\')', false, true, false, 'https://avalonstudios.itch.io/thrive', 'Available on', true)
+section#games.section
+    +gameDetail('Fight Enemies', 'Fight common enemies as you journey through a procedurally generated world of circles.', './assets/img/thrive/thrive-fightEnemies.png')
+    +gameDetail('Enter Dungeons', 'Bosses on the overworld will occasionally drop portals to visit themed dungeons.', './assets/img/thrive/thrive-dungeons.png')
+    +gameDetail('Win Boss Fights', 'Beating a boss inside of a dungeon wins unique loot.', './assets/img/thrive/thrive-fightBosses.png')
+    +gameDetail('Helpful UI', 'Instructions, an inventory, and your statistics are all easily viewable at the click of a key.', './assets/img/thrive/thrive-instructions.png')
+script
+    include script.js

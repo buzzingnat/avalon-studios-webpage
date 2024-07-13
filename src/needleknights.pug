@@ -1,0 +1,15 @@
+include ./mixins/gameHero.pug
+include ./mixins/gameDetail.pug
+
+doctype html
+html(lang='en')
+    include includes/head.pug
+include includes/top-nav.pug
++gameHero('Needle Knights', 'A sidescrolling shooter. Switch between a team of tiny fairies riding the backs of friendly insects.', 'background-image:url(\'./assets/img/needleknights-title.png\')', false, true, false,'https://avalonstudios.itch.io/needle-knights', 'Available on')
+section#games.section
+    +gameDetail('Powerups', 'Collect powerups to make you stronger.', './assets/img/needleknights-dragonfly-powerup.png')
+    +gameDetail('Special Attacks', 'Each character has a powerful unique attack.', './assets/img/needleknights-dragonfly-special.png')
+    +gameDetail('Multiple Heroes', 'Switch between a team of three fairies.', './assets/img/needleknights-bee.png')
+    +gameDetail('Ladybug Helpers', 'Collect ladybug helpers to fly with you and boost your attacks.', './assets/img/needleknights-moth.png')
+script
+    include script.js

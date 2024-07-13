@@ -1,0 +1,72 @@
+@charset "utf-8";
+@import "../../node_modules/bulma/bulma.sass";
+
+/*
+image attributions:
+castle_9584180.png : Icon by Freepik (AI generated)
+castle-2150844182.jpg : Image by Freepik (AI generated)
+*/
+
+.avalon-hero-image {
+    background: url('./assets/img/castle-2150844182.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(250,250,250,.4);
+}
+.avalon-primary-background-gradient {
+    background: linear-gradient(hsl(230, 100%, 95%), hsl(230, 100%, 75%));
+}
+.avalon-primary-text {
+    color: hsl(230, 100%, 85%);
+}
+.avalon-primary-background {
+    background-color: hsl(230, 100%, 70%);
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+.button.avalon-primary-background {
+    background-color: hsl(230, 100%, 70%);
+    color: #efefef;
+}
+.button.tall {
+    height: 3em;
+}
+.button.avalon-primary-background:hover {
+    background-color: hsl(230, 100%, 60%);
+}
+
+.navbar-item h2 {
+    margin: 0 1em;
+}
+.navbar-item img {
+  width: auto;
+}
+
+.gemhunter-hero-image {
+    background: url('./assets/img/gemhunter-gameplay-start.png') no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(250,250,250,.4);
+}
+
+.background-hero-image {
+    background-color: silver;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(250,250,250,.4);
+}
+
+.pale-hero-image {
+    box-shadow: inset 0 0 0 1000px rgba(250,250,250,.8);
+}
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 1000;
+    cursor: pointer;
+}

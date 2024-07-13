@@ -1,0 +1,10 @@
+mixin gameDetail(title, subtitle, imageSource)
+    .section
+        article.box.columns.is-vcentered
+            .column.is-5
+                h3.title #{title}
+                h5.subtitle #{subtitle}
+            .column
+                figure.image.is-4by3
+                    img(src=imageSource)
+                        

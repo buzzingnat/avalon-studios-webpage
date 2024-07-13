@@ -1,0 +1,25 @@
+body.has-background-light.has-navbar-fixed-top
+    nav.navbar#top-of-page.is-fixed-top
+        .navbar-brand
+            a.navbar-item(href="./index.html")
+                img(
+                    src="./assets/img/logo-avalonstudios-jul2023-small.png",
+                    width="50",
+                    height="54"
+                )
+                h2 Avalon Studios
+            a.navbar-burger(
+                role="button",
+                aria-label="menu",
+                aria-expanded="false",
+                data-target="avalon-navbar"
+            )
+                span(aria-hidden="true")
+                span(aria-hidden="true")
+                span(aria-hidden="true")
+        #avalon-navbar.navbar-menu
+            .navbar-end
+                a.navbar-item(href="./index.html#games") Games
+                a.navbar-item(href="./index.html#about") About
+                a.navbar-item(href="./index.html#contact") Contact
+    button#return-to-top(title="Go to top").button.is-medium.is-info Top
