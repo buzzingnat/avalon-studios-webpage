@@ -1,0 +1,10 @@
+mixin kongBtn(btnKongLink, btnKongContents)
+    a.button.avalon-primary-background.tall.m-1.is-primary.is-large.is-flex-direction-column.px-3(href=btnKongLink alt="Visit our Kongregate page")
+        span.has-text-centered.is-size-6.level.mb-1 #{btnKongContents}
+        span.has-text-centered.is-size-4.level
+            img.is-32x32(
+                src="./assets/img/kongregate-logo.png",
+                width="32"
+            )
+            span.ml-2 Kongregate
+            

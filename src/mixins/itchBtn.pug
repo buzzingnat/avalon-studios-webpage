@@ -1,0 +1,10 @@
+mixin itchBtn(btnItchLink, btnItchContents)
+    a.button.avalon-primary-background.tall.m-1.is-primary.is-large.is-flex-direction-column.px-3(href=btnItchLink alt="Visit our Itch.io page")
+        span.has-text-centered.is-size-6.level.mb-1 #{btnItchContents}
+        span.has-text-centered.is-size-4.level
+            img.is-32x32(
+                src="./assets/img/icon-itchio-logo-textless-black-2019.png",
+                width="32"
+            )
+            span.ml-2 itch.io
+            

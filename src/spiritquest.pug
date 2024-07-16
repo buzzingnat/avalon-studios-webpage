@@ -1,0 +1,17 @@
+include ./mixins/gameHero.pug
+include ./mixins/gameDetail.pug
+
+doctype html
+html(lang='en')
+    include includes/head.pug
+include includes/top-nav.pug
++gameHero('Spirit Quest', 'Zelda-like adventure game.', 'background-image:url(\'./assets/img/spiritquest-attack.png\')', false, false, false, '#', 'Available on', true)
+section#games.section
+    +gameDetail('Adventure', 'Follow your character on a quest.', './assets/img/spiritquest-adventure.png')
+    +gameDetail('Puzzles', 'Solve puzzles to progress the story.', './assets/img/spiritquest-puzzles.png')
+    +gameDetail('Abilities', 'Gain powerful weapons and abilities from treasure chests.', './assets/img/spiritquest-abilities.png')
+    +gameDetail('Fight', 'Fight boss battles to test your skill.', './assets/img/spiritquest-fight.png')
+script
+    include script.js
+
+everly5Today

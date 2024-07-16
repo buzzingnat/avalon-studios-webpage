@@ -1,0 +1,22 @@
+include ./steamBtn.pug
+include ./itchBtn.pug
+include ./kongBtn.pug
+
+mixin gameBox(title, subtitle, gameLink, isBtnSteam, btnSteamLink, btnSteamContents, isBtnItch, btnItchLink, btnItchContents, isBtnKong, btnKongLink, btnKongContents, imageSource, smallImg1Src, smallImg1Txt, smallImg2Src, smallImg2Txt, smallImg3Src, smallImg3Txt)
+    .box
+        .columns.is-vcentered
+            article.column.is-three-fifths
+                h3.title
+                    a(href=gameLink alt=title) #{title}
+                p.subtitle.is-6 #{subtitle}
+                .level
+                    if isBtnSteam
+                        +steamBtn(btnSteamLink, btnSteamContents).level-item
+                    if isBtnItch
+                        +itchBtn(btnItchLink, btnItchContents).level-item
+                    if isBtnKong
+                        +kongBtn(btnKongLink, btnKongContents).level-item
+            .column
+                a(href=gameLink alt=title)
+                    figure.image.is-4by3
+                        img(src=imageSource)

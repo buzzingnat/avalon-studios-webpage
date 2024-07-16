@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="./assets/img/logo/logo-avalonstudios-jul2024-16x16.png">
+    <title>Avalon Studios</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+</html>
+<body class="has-navbar-fixed-top">
+  <nav class="navbar is-fixed-top" id="top-of-page">
+    <div class="navbar-brand"><a class="navbar-item" href="./index.html"><img src="./assets/img/logo/logo-avalonstudios-jul2024-45x37.png" width="45" height="37">
+        <h2>Avalon Studios</h2></a><a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="avalon-navbar"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
+    <div class="navbar-menu" id="avalon-navbar">
+      <div class="navbar-end"><a class="navbar-item" href="./index.html#games">Games</a><a class="navbar-item" href="./index.html#about">About</a><a class="navbar-item" href="./index.html#contact">Contact</a></div>
+    </div>
+  </nav>
+  <button class="button is-medium is-info" id="return-to-top" title="Go to top">Top</button>
+</body>
+<div class="hero is-medium background-hero-image pale-hero-image" id="intro" style="background-image:url('./assets/img/thrive/thrive-maintitle-playbutton.png')">
+  <div class="hero-body columns is-vcentered">
+    <div class="column">
+      <p class="title">Thrive</p>
+      <p class="subtitle">A hardcore bullet hell game with RPG elements.</p>
+    </div>
+    <div class="column is-flex is-justify-content-center"><a class="button avalon-primary-background tall m-1 is-primary is-large is-flex-direction-column px-3" href="https://avalonstudios.itch.io/thrive" alt="Visit our Itch.io page"><span class="has-text-centered is-size-6 level mb-1">Available on</span><span class="has-text-centered is-size-4 level"><img class="is-32x32" src="./assets/img/icon-itchio-logo-textless-black-2019.png" width="32"/><span class="ml-2">itch.io</span></span></a>
+    </div>
+  </div>
+</div>
+<section class="section" id="games">
+  <article class="box columns is-vcentered">
+    <div class="column is-5">
+      <h3 class="title">Fight Enemies</h3>
+      <h5 class="subtitle">Fight common enemies as you journey through a procedurally generated world of circles.</h5>
+    </div>
+    <div class="column">
+      <figure class="image is-4by3"><img src="./assets/img/thrive/thrive-fightEnemies.png"/></figure>
+    </div>
+  </article>
+  <article class="box columns is-vcentered">
+    <div class="column is-5">
+      <h3 class="title">Enter Dungeons</h3>
+      <h5 class="subtitle">Bosses on the overworld will occasionally drop portals to visit themed dungeons.</h5>
+    </div>
+    <div class="column">
+      <figure class="image is-4by3"><img src="./assets/img/thrive/thrive-dungeons.png"/></figure>
+    </div>
+  </article>
+  <article class="box columns is-vcentered">
+    <div class="column is-5">
+      <h3 class="title">Win Boss Fights</h3>
+      <h5 class="subtitle">Beating a boss inside of a dungeon wins unique loot.</h5>
+    </div>
+    <div class="column">
+      <figure class="image is-4by3"><img src="./assets/img/thrive/thrive-fightBosses.png"/></figure>
+    </div>
+  </article>
+  <article class="box columns is-vcentered">
+    <div class="column is-5">
+      <h3 class="title">Helpful UI</h3>
+      <h5 class="subtitle">Instructions, an inventory, and your statistics are all easily viewable at the click of a key.</h5>
+    </div>
+    <div class="column">
+      <figure class="image is-4by3"><img src="./assets/img/thrive/thrive-instructions.png"/></figure>
+    </div>
+  </article>
+</section>
+<script>// bulma code for toggling navbar hamburger menu
+document.addEventListener("DOMContentLoaded", () => {
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll(".navbar-burger"),
+        0
+    );
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach((el) => {
+        el.addEventListener("click", () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle("is-active");
+            $target.classList.toggle("is-active");
+        });
+    });
+});
+
+// code for the Return To Top button
+let returnToTopButton = document.getElementById("return-to-top");
+
+// When the user scrolls down 100px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    returnToTopButton.style.display = "block";
+  } else {
+    returnToTopButton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+returnToTopButton.addEventListener("click", topFunction);
+
+</script>
