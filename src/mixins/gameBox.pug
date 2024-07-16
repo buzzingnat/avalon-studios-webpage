@@ -4,7 +4,7 @@ include ./kongBtn.pug
 
 mixin gameBox(title, subtitle, gameLink, isBtnSteam, btnSteamLink, btnSteamContents, isBtnItch, btnItchLink, btnItchContents, isBtnKong, btnKongLink, btnKongContents, imageSource, smallImg1Src, smallImg1Txt, smallImg2Src, smallImg2Txt, smallImg3Src, smallImg3Txt)
     .box
-        .columns
+        .columns.is-vcentered
             article.column.is-three-fifths
                 h3.title
                     a(href=gameLink alt=title) #{title}

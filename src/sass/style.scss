@@ -1,17 +1,17 @@
 @charset "utf-8";
-@import "../../node_modules/bulma/bulma.sass";
-
-/*
-image attributions:
-castle_9584180.png : Icon by Freepik (AI generated)
-castle-2150844182.jpg : Image by Freepik (AI generated)
-*/
+@use "../../node_modules/bulma/sass/utilities/css-variables.scss" as cv;
+@use "../../node_modules/bulma/sass/themes/dark.scss" as dark;
+@import "../../node_modules/bulma/bulma.scss";
+@import "../../node_modules/bulma/sass/utilities/css-variables.scss" as cv;
 
 .avalon-hero-image {
-    background: url('./assets/img/castle-2150844182.jpg') no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    box-shadow: inset 0 0 0 1000px rgba(250,250,250,.4);
+    box-shadow: inset 0 0 0 1000px rgba(250, 250, 250, 0.4);
+    /* each house element needs to be called individually */
+    background: url("./assets/img/logo/logo-avalonstudios-jul2024-45x37.png") center top/165px no-repeat,
+        url("./assets/img/patterns/pixel-grass-48x48.png") left top/contain repeat;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
 }
 .avalon-primary-background-gradient {
     background: linear-gradient(hsl(230, 100%, 95%), hsl(230, 100%, 75%));
@@ -44,8 +44,15 @@ castle-2150844182.jpg : Image by Freepik (AI generated)
   width: auto;
 }
 
-.gemhunter-hero-image {
-    background: url('./assets/img/gemhunter-gameplay-start.png') no-repeat;
+.box {
+    margin: var(--bulma-column-gap) 0;
+}
+.image img {
+    object-fit: contain;
+}
+
+.gemblast-hero-image {
+    background: url('./assets/img/gemblast/gemblast-gameplay-start.png') no-repeat;
     background-position: 50% 50%;
     background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(250,250,250,.4);
@@ -70,3 +77,44 @@ castle-2150844182.jpg : Image by Freepik (AI generated)
     z-index: 1000;
     cursor: pointer;
 }
+
+@media (width < 575px) {
+    .avalon-hero-image {
+        /* each house element needs to be called individually */
+        background: url("./assets/img/logo/logo-avalonstudios-jul2024-45x37.png") center top/165px no-repeat,
+            url("./assets/img/patterns/pixel-grass-48x48.png") left top/contain repeat;
+    }
+}
+@media (575px <= width < 850px) {
+    .avalon-hero-image {
+        /* each house element needs to be called individually */
+        background: url("./assets/img/patterns/pixel-house-big-single-48x48.png") right bottom/contain no-repeat,
+            url("./assets/img/patterns/pixel-house-simple-cluster-48x48.png") calc(100% - 40px) bottom/contain no-repeat,
+            url("./assets/img/logo/logo-avalonstudios-jul2024-45x37.png") center top/165px no-repeat,
+            url("./assets/img/patterns/pixel-grass-48x48.png") left top/contain repeat;
+    }
+}
+@media (850px <= width) {
+    .avalon-hero-image {
+        /* each house element needs to be called individually */
+        background: url("./assets/img/patterns/pixel-house-big-single-48x48.png") right bottom/contain no-repeat,
+            url("./assets/img/patterns/pixel-house-simple-cluster-48x48.png") calc(100% - 40px) bottom/contain no-repeat,
+            url("./assets/img/patterns/pixel-house-fancy-cluster-48x48.png")calc(100% - 146px) bottom/contain no-repeat,
+            url("./assets/img/patterns/pixel-house-little-single-48x48.png") calc(100% - 184px) bottom/contain no-repeat,
+            url("./assets/img/logo/logo-avalonstudios-jul2024-45x37.png") center top/165px no-repeat,
+            url("./assets/img/patterns/pixel-grass-48x48.png") left top/contain repeat;
+    }
+}
+
+@include cv.system-theme($name: "dark") {
+    .background-hero-image, .avalon-hero-image {
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+    }
+    #return-to-top.button.is-info {
+        background-color: var(--bulma-info-invert);
+        color: var(--bulma-info);
+    }
+    @include dark.dark-theme;
+}
+
+
